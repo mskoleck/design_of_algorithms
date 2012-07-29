@@ -12,7 +12,15 @@ class Heap:
 
     def __repr__( self ):
         return "%s(%r)" % (self.__class__, self.data)
-    
+ 
+
+    def size(self):
+        return len(self.data)
+
+    def peek(self):
+        if self.size() == 0:
+            return None
+        return self.data[0]
 
     def left_c(self, n):
         return 2 * n + 1
